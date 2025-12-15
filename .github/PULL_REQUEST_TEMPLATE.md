@@ -1,5 +1,9 @@
 ## Description
 
+## Related Issues 
+* Fixes <#issue_id>
+* Refs <#issue_id>
+
 ## Type of Change
 
 Please check the boxes that apply:
