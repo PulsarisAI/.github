@@ -1,0 +1,65 @@
+name: "Refactor / Technical Debt"
+description: Propose improvements to the existing codebase, architecture, or technical debt.
+title: "[REFACTOR] <summary of the proposed change>"
+labels:
+  - "refactor"
+  - "technical-debt"
+  - "status:triage"
+
+body:
+  - type: textarea
+    id: problem_description
+    attributes:
+      label: "Current Problem / Technical Debt"
+      description: Describe the current issue with the code or architecture (e.g., maintainability, performance, complexity, duplication).
+      placeholder: Why is the current code/structure suboptimal?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      description: How urgent is this refactoring?
+      options:
+        - 🟢Low
+        - 🟡Medium
+        - 🔴High
+        - 🟣Critical
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: "Proposed Refactoring / Solution"
+      description: Explain what changes are proposed to resolve the issue. Be specific about the scope.
+      placeholder: Describe the intended changes and the files/components involved.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_benefit
+    attributes:
+      label: "Expected Benefits"
+      description: What improvements will this refactoring bring? (e.g., cleaner code, better performance, easier debugging, simpler feature addition).
+      placeholder: Outline the positive outcomes.
+    validations:
+      required: true
+
+  - type: textarea
+    id: unresolved_question
+    attributes:
+      label: "Unresolved Questions / Risks"
+      description: What questions or potential risks still remain? (e.g., impact on other features, dependencies).
+      placeholder: Identify any open questions or uncertainties.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "Additional Context"
+      description: (Optional) Add links to relevant code, discussions, or architectural diagrams.
+    validations:
+      required: false

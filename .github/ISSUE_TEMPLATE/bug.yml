@@ -1,0 +1,75 @@
+name: "Bug Report"
+description: Report a bug or an unexpected behavior
+title: "[BUG] <summary of the issue>"
+labels:
+  - "bug"
+  - "status:triage"
+
+body:
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: "Description of the Bug"
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe the problem briefly.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      description: How urgent is this refactoring?
+      options:
+        - 🟢Low
+        - 🟡Medium
+        - 🔴High
+        - 🟣Critical
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: "Steps to Reproduce"
+      description: List the steps to reproduce the behavior.
+      placeholder: |
+        1. Use testcase '....'
+        2. Run command '....'
+        3. See error/unexpected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: "Expected Behavior"
+      description: Describe what you expected to happen instead.
+      placeholder: What should the system do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: "Actual Behavior"
+      description: Describe what actually happened, including error messages or unexpected outcomes.
+      placeholder: What is the system actually doing?
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Screenshots/Logs"
+      description: (Optional) Add screenshots or console logs to help explain your problem.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "Additional Context"
+      description: (Optional) Add any other context about the problem here (e.g., environment, browser, OS).
+    validations:
+      required: false
