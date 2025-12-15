@@ -1,0 +1,14 @@
+name: Show Pusher ID
+
+on:
+  push:
+    branches:
+      - '**'   # any branch
+
+jobs:
+  show-user:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print GitHub user ID
+        run: |
+          echo "Pushed by GitHub user: ${{ github.actor }}"
