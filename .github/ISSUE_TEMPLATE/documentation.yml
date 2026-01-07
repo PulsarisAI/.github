@@ -1,0 +1,47 @@
+name: "Documentation Request"
+description: Create a new ticket for documentation related changes or additions
+title: "[DOC] <title>"
+labels:
+  - "documentation"
+  - "status:triage"
+
+body:
+  - type: dropdown
+    id: doc_type
+    attributes:
+      label: "Documentation Type"
+      description: What kind of documentation is this request about?
+      options:
+        - 📄 New documentation
+        - ✏️ Update existing documentation
+        - 🐞 Fix incorrect documentation
+        - 🧹 Improve clarity / readability
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: Describe the documentation issue or request.
+      placeholder: What documentation is missing, outdated, or unclear?
+    validations:
+      required: true
+
+  - type: textarea
+    id: unresolved_question
+    attributes:
+      label: "Unresolved Questions"
+      description: Any remaining questions or unclear parts about this documentation?
+      placeholder: List open questions if any.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "Additional Context"
+      description: Add any related links, screenshots, references, or examples.
+      placeholder: Optional supporting information.
+    validations:
+      required: false
